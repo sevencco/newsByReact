@@ -39,7 +39,7 @@ componentDidMount(){
 render(){
   const {usercollection,usercomments}=this.state;
     const usercollectionList=usercollection.length?usercollection.map((uc,index)=>(
-       <Card key={index}  extra={<a  href={`/#/details/${uc.uniquekey}`} >查看</a>} >
+       <Card key={index}  extra={<a href={`/#/details/${uc.uniquekey}`} >查看</a>} >
         <p>{uc.Title}</p>
        </Card>
       ))
@@ -47,7 +47,7 @@ render(){
     '您还没有收藏任何新闻，快去收藏喜欢的文章吧';
 
     const usercommentsList=usercomments.length?usercomments.map((comment,index)=>(
-       <Card key={index} title={`您于${comment.datetime}评论了该文章`} extra={<a target="_blank" href={`/#/details/${comment.uniquekey}`} >查看</a>} >
+       <Card key={index} title={`您于${comment.datetime}评论了该文章`} extra={<a href={`/#/details/${comment.uniquekey}`} >查看</a>} >
         <p>{comment.Comments}</p>
        </Card>
       ))
